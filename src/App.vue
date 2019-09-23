@@ -24,4 +24,18 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "@/assets/scss/globals";
+@import "@/assets/scss/variables";
+
+#app {
+  @include flex(stretch, space-between);
+  flex-direction: column;
+  min-height: 100vh;
+
+  .my-container {
+    flex: 1;
+    display: flex;
+  }
+}
+</style>

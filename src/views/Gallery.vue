@@ -1,5 +1,5 @@
 <template>
-  <div id="gallery">
+  <div id="gallery" class="my-container">
     gallery
   </div>
 </template>
