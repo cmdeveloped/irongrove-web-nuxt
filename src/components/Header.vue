@@ -27,8 +27,8 @@ export default {};
 @import "@/assets/scss/variables";
 
 .header {
-  padding: 2rem 4rem;
-  border-bottom: 1px solid rgba($primary, 0.1);
+  padding: 1.5rem 4rem;
+  // border-bottom: 1px solid $secondary;
 
   &__inner {
     @include flex(center, space-between);

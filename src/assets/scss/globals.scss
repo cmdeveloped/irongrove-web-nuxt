@@ -3,6 +3,43 @@
 html,
 body {
   background-color: $secondary;
+  color: $primary;
   min-height: 100vh;
   margin: 0;
+
+  a {
+    color: $color1;
+    position: relative;
+    left: 0;
+    transition: 0.25s;
+
+    &:hover {
+      color: $color1;
+      text-decoration: none;
+    }
+
+    &.move {
+      &:hover {
+        left: 0.5rem;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: $headings-font-family;
+  line-height: 1;
+}
+
+.primary-btn {
+  background-color: $color1;
+  color: $secondary;
+  border: 0;
+  padding: 1rem 4rem;
 }

@@ -1,9 +1,12 @@
 <template>
   <div id="home" class="my-container home">
     <div class="home__inner">
-      <div class="home__left"></div>
+      <div class="home__left">
+        <Display :active="active" :display="display" />
+        <ShutterNav :page="page" :pages="shutters.length" />
+      </div>
       <div class="home__right">
-        <Shutters />
+        <Shutters :active="active" :photos="display.photos" />
       </div>
     </div>
   </div>
@@ -11,11 +14,30 @@
 
 <script>
 import Shutters from "@/components/Shutters";
+import Display from "@/components/Display";
+import ShutterNav from "@/components/ShutterNav";
+
+import { shutters } from "@/assets/data/shutters";
 
 export default {
   name: "home",
   components: {
-    Shutters
+    Shutters,
+    Display,
+    ShutterNav
+  },
+  data: () => ({
+    shutters,
+    active: null,
+    page: 0
+  }),
+  computed: {
+    display() {
+      const that = this;
+      const shutters = that.shutters;
+      const page = that.page;
+      return shutters[page];
+    }
   }
 };
 </script>
@@ -27,11 +49,18 @@ export default {
   &__inner {
     @include flex(stretch, space-between);
     width: 100%;
-    padding: 3rem 0 3rem 4rem;
+  }
+
+  &__left {
+    @include flex(flex-start, space-between);
+    flex-direction: column;
+    padding: 4rem 2rem 2rem 4rem;
+    margin-top: 5rem;
+    width: 30rem;
   }
 
   &__right {
-    width: 65%;
+    flex: 1;
   }
 }
 </style>
