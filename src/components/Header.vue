@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="header__inner">
-      <div class="header__logo"></div>
+      <div class="header__logo">
+        <img src="../assets/images/favicon.svg" alt="" />
+      </div>
       <nav class="header__nav">
         <ul>
           <li
@@ -32,6 +34,12 @@ export default {};
 
   &__inner {
     @include flex(center, space-between);
+  }
+
+  &__logo {
+    img {
+      height: 3rem;
+    }
   }
 
   &__nav {

@@ -4,6 +4,7 @@ import Router from "vue-router";
 import Home from "./views/Home";
 import About from "./views/About";
 import Gallery from "./views/Gallery";
+import Contact from "./views/Contact";
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export const routes = [
     path: "/gallery",
     name: "gallery",
     component: Gallery
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: Contact
   }
 ];
 
