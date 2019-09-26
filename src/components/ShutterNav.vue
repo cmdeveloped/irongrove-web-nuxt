@@ -5,6 +5,7 @@
         <button
           v-for="(page, idx) in $attrs.pages"
           :class="$attrs.page === idx ? 'active' : ''"
+          :key="idx"
           type="button"
           name="nav-dot"
           @click="$parent.page = idx"

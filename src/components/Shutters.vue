@@ -38,7 +38,7 @@ export default {};
     overflow: hidden;
     position: relative;
     top: 0;
-    transition: all 1s ease-in-out;
+    transition: all 0.75s ease-in-out;
 
     &__inner {
       height: 100%;
@@ -65,7 +65,7 @@ export default {};
       transition-delay: 0.1s;
 
       & + .inactive {
-        transition-delay: 0.15s;
+        transition-delay: 0.1s;
       }
     }
   }

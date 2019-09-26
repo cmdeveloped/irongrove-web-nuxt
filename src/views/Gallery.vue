@@ -1,6 +1,6 @@
 <template>
   <div id="gallery" class="my-container">
-    gallery
+    {{ process.env.GALLERY_PASS }}
   </div>
 </template>
 
