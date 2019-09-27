@@ -15,6 +15,16 @@
               {{ route.name }}
             </router-link>
           </li>
+          <li>
+            <a href="tel:8508038843">
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

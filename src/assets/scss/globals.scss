@@ -43,3 +43,18 @@ h3,
   border: 0;
   padding: 1rem 4rem;
 }
+
+.primary-input {
+  background-color: transparent;
+  border: 2px solid rgba($primary, 0.25);
+  border-radius: 10px;
+  padding: 1rem;
+  color: $primary;
+  text-align: center;
+  transition: 0.25s;
+
+  &:focus {
+    outline: none;
+    border-color: $color1;
+  }
+}
