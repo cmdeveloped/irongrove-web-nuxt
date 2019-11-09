@@ -16,7 +16,17 @@
       <div
         class="shutter__inner"
         :style="{ backgroundImage: 'url(' + photo.photo + ')' }"
-      ></div>
+      >
+        <button
+          type="button"
+          name="shutter-back"
+          class="primary-btn"
+          @click.stop="$parent.active = null"
+          v-if="$parent.active !== null && $parent.active === idx"
+        >
+          <i class="fas fa-left"></i> Back
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -43,13 +53,17 @@ export default {};
     &__inner {
       height: 100%;
       @include background(cover, center);
+      padding: 2rem;
       transition: 0.5s;
       cursor: pointer;
+      @include flex(flex-end, flex-start);
     }
 
-    &:hover {
-      .shutter__inner {
-        transform: scale(1.05);
+    &:not(.active) {
+      &:hover {
+        .shutter__inner {
+          transform: scale(1.05);
+        }
       }
     }
 

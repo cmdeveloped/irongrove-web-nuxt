@@ -3,7 +3,7 @@
     <div class="home__inner">
       <div class="home__left">
         <Display :active="active" :display="display" />
-        <ShutterNav :page="page" :pages="shutters.length" />
+        <ShutterNav :active="active" :page="page" :pages="shutters.length" />
       </div>
       <div class="home__right">
         <Shutters :active="active" :photos="display.photos" />

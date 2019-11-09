@@ -1,6 +1,6 @@
 <template>
   <div class="shutter-nav">
-    <div class="shutter-nav__inner">
+    <div class="shutter-nav__inner" v-if="$attrs.active === null">
       <nav>
         <button
           v-for="(page, idx) in $attrs.pages"
