@@ -25,7 +25,6 @@ export const categories = {
     "https://irongrove.s3.us-east-2.amazonaws.com/furniture_2.jpg",
     "https://irongrove.s3.us-east-2.amazonaws.com/furniture_3.jpg",
     "https://irongrove.s3.us-east-2.amazonaws.com/furniture_4.jpg",
-    "https://irongrove.s3.us-east-2.amazonaws.com/furniture_5.jpg",
-    "https://irongrove.s3.us-east-2.amazonaws.com/furniture_6.jpg"
+    "https://irongrove.s3.us-east-2.amazonaws.com/furniture_5.jpg"
   ]
 };

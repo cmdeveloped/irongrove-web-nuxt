@@ -1,13 +1,150 @@
 <template>
   <div class="gallery">
     <div class="gallery__inner">
-      <h1>Accessed</h1>
+      <nav class="gallery__nav">
+        <div class="gallery__nav--inner">
+          <button
+            type="button"
+            :class="['secondary-btn', category === false ? 'active' : '']"
+            id="all-btn"
+            @click="category = false"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            :class="['secondary-btn', category === cat ? 'active' : '']"
+            v-for="(cat, idx) in Object.keys(categories)"
+            :key="idx"
+            :id="cat + '-btn'"
+            @click="category = cat"
+          >
+            {{ cat | capitalize }}
+          </button>
+        </div>
+        <span id="magic-line" :style="lineStyle"></span>
+      </nav>
+      <section class="gallery__photos">
+        <div class="photos">
+          <div class="photo--wrapper" v-for="photo in photos" :key="photo">
+            <div
+              class="photo"
+              :style="{ backgroundImage: `url(${photo})` }"
+              @click="highlight = photo"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="highlight" v-if="highlight" @click="highlight = false">
+      <img :src="highlight" alt="Highlight Photo" />
     </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<style lang="scss" scoped>
+.gallery {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  @include flex(center, center);
 
-<style lang="css" scoped></style>
+  &__nav {
+    position: relative;
+  }
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__photos {
+    .photos {
+      @include flex(center, flex-start);
+      flex-wrap: wrap;
+      margin: 0 -0.5rem;
+
+      .photo {
+        width: 100%;
+        @include background(cover, center);
+        background-color: $primary;
+        padding-bottom: 56.25%;
+        cursor: pointer;
+
+        &--wrapper {
+          padding: 0.5rem;
+          width: 33.33%;
+        }
+      }
+    }
+  }
+}
+
+#magic-line {
+  transition: 0.25s;
+}
+
+#highlight {
+  @include flex(center, center);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.75);
+
+  img {
+    max-width: 75%;
+    max-height: 90%;
+    box-shadow: -2px 2px 1rem rgba(black, 0.4);
+  }
+}
+</style>
+
+<script>
+/* eslint-disable */
+import { categories } from "@/assets/data/categories";
+
+export default {
+  data: () => ({
+    categories,
+    category: false,
+    highlight: false
+  }),
+  computed: {
+    photos() {
+      const that = this;
+      const category = that.category ? that.category : false;
+      const categories = Object.keys(that.categories);
+      let photos = [];
+
+      if (!category) {
+        for (let cat of categories) {
+          let arr = that.categories[cat];
+          photos = photos.concat(arr);
+        }
+      } else {
+        photos = that.categories[category];
+      }
+
+      return photos;
+    },
+    lineStyle() {
+      const that = this;
+      const category = that.category ? that.category : "all";
+      const button = $(`#${category}-btn`);
+      const width = button.length ? button.outerWidth() : 0;
+      const left = button.length ? button.position().left : 0;
+      return {
+        width: `${width}px`,
+        left: `${left}px`,
+        height: "2px",
+        backgroundColor: "#f7d54f",
+        position: "relative",
+        display: "inline-block"
+      };
+    }
+  }
+};
+</script>

@@ -44,8 +44,7 @@ export default {
     Gallery
   },
   data: () => ({
-    password: "",
-    access: null
+    password: ""
   }),
   methods: {
     gainAccess() {
