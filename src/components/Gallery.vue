@@ -1,32 +1,16 @@
 <template>
   <div class="gallery">
+    <div class="gallery__heading text-center">
+      <h1>The Iron Grove</h1>
+    </div>
+
     <div class="gallery__inner">
-      <nav class="gallery__nav">
-        <div class="gallery__nav--inner">
-          <button
-            type="button"
-            :class="['secondary-btn', category === false ? 'active' : '']"
-            id="all-btn"
-            @click="category = false"
-          >
-            All
-          </button>
-          <button
-            type="button"
-            :class="['secondary-btn', category === cat ? 'active' : '']"
-            v-for="(cat, idx) in Object.keys(categories)"
-            :key="idx"
-            :id="cat + '-btn'"
-            @click="category = cat"
-          >
-            {{ cat | capitalize }}
-          </button>
+      <section class="gallery__photos" v-for="(category, key) in categories">
+        <div class="gallery__photos--heading">
+          <h2>{{ key }}</h2>
         </div>
-        <span id="magic-line" :style="lineStyle"></span>
-      </nav>
-      <section class="gallery__photos">
         <div class="photos">
-          <div class="photo--wrapper" v-for="photo in photos" :key="photo">
+          <div class="photo--wrapper" v-for="photo in category" :key="photo">
             <div
               class="photo"
               :style="{ backgroundImage: `url(${photo})` }"
@@ -48,10 +32,9 @@
   padding: 2rem;
   margin: 0 auto;
   width: 100%;
-  @include flex(center, center);
 
-  &__nav {
-    position: relative;
+  &__heading {
+    text-transform: uppercase;
   }
 
   &__inner {
@@ -59,6 +42,18 @@
   }
 
   &__photos {
+    &--heading {
+      padding-right: 3rem;
+      margin: 3rem 2rem;
+      border-bottom: 2px solid #f7d54f;
+      display: inline-block;
+
+      h2 {
+        text-transform: capitalize;
+        color: $color1;
+      }
+    }
+
     .photos {
       @include flex(center, flex-start);
       flex-wrap: wrap;

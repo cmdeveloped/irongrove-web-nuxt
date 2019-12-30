@@ -7,6 +7,12 @@
       </div>
       <div class="home__right">
         <Shutters :active="active" :photos="display.photos" />
+        <ShutterNav
+          v-if="!active"
+          :active="active"
+          :page="page"
+          :pages="shutters.length"
+        />
       </div>
     </div>
   </div>
@@ -49,6 +55,10 @@ export default {
   &__inner {
     @include flex(stretch, space-between);
     width: 100%;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -57,10 +67,38 @@ export default {
     padding: 4rem 2rem 2rem 4rem;
     margin-top: 5rem;
     width: 30rem;
+
+    @media (max-width: 1024px) {
+      padding: 3rem 2rem 3rem;
+      margin-top: 0;
+      width: 100%;
+
+      .shutter-nav {
+        display: none;
+      }
+    }
   }
 
   &__right {
     flex: 1;
+
+    .shutter-nav {
+      padding: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      min-height: 25rem;
+    }
+
+    @media (max-width: 650px) {
+      min-height: 100vh;
+    }
+
+    @media (min-width: 1024px) {
+      .shutter-nav {
+        display: none;
+      }
+    }
   }
 }
 </style>

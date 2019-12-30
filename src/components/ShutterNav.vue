@@ -63,6 +63,27 @@ export default {};
           margin-top: 1rem;
         }
       }
+
+      @media (max-width: 1024px) {
+        @include flex(flex-end, center);
+        flex-direction: row;
+
+        button {
+          width: 1px;
+          height: 0.75rem;
+          padding: 2px;
+
+          &.active {
+            width: 3px;
+            height: 1.25rem;
+          }
+
+          & + button {
+            margin-top: 0;
+            margin-left: 1rem;
+          }
+        }
+      }
     }
   }
 }

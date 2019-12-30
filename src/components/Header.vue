@@ -42,6 +42,10 @@ export default {};
   padding: 1.5rem 4rem;
   // border-bottom: 1px solid $secondary;
 
+  @media (max-width: 1024px) {
+    padding: 1.5rem 2rem;
+  }
+
   &__inner {
     @include flex(center, space-between);
   }

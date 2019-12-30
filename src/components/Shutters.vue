@@ -42,6 +42,18 @@ export default {};
   height: 100%;
   @include flex(center, space-between);
 
+  @media (max-width: 1440px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+
   .shutter {
     height: calc(100% - 4rem);
     width: calc(33.33% - 1.5rem);
@@ -49,6 +61,21 @@ export default {};
     position: relative;
     top: 0;
     transition: all 0.75s ease-in-out;
+
+    @media (max-width: 1440px) {
+      height: calc(33.33% - 1rem);
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      height: 100%;
+      width: calc(33.33% - 1rem);
+    }
+
+    @media (max-width: 650px) {
+      height: calc(33.33% - 1rem);
+      width: 100%;
+    }
 
     &__inner {
       height: 100%;
@@ -71,6 +98,10 @@ export default {};
       height: 100%;
       width: 100%;
       transition-delay: 0.15s;
+
+      @media (max-width: 1440px) {
+        flex-shrink: 0;
+      }
     }
 
     &.inactive {
