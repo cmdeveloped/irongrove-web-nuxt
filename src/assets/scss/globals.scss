@@ -42,6 +42,10 @@ h3,
   color: $secondary;
   border: none;
   padding: 1rem 4rem;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba($color1, 0.75);
+  }
 }
 
 .primary-input {
