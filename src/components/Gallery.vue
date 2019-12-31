@@ -33,6 +33,10 @@
   margin: 0 auto;
   width: 100%;
 
+  @media (max-width: 650px) {
+    padding: 2rem 1rem 1rem;
+  }
+
   &__heading {
     text-transform: uppercase;
   }
@@ -44,7 +48,7 @@
   &__photos {
     &--heading {
       padding-right: 3rem;
-      margin: 3rem 2rem;
+      margin: 3rem 0 2rem;
       border-bottom: 2px solid #f7d54f;
       display: inline-block;
 
@@ -69,6 +73,14 @@
         &--wrapper {
           padding: 0.5rem;
           width: 33.33%;
+
+          @media (max-width: 768px) {
+            width: 50%;
+          }
+
+          @media (max-width: 650px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -93,6 +105,10 @@
     max-width: 75%;
     max-height: 90%;
     box-shadow: -2px 2px 1rem rgba(black, 0.4);
+
+    @media (max-width: 650px) {
+      max-width: 90%;
+    }
   }
 }
 </style>

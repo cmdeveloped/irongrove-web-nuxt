@@ -28,6 +28,7 @@
     max-width: 25rem;
     width: 100%;
     margin: 0 auto;
+    padding: 0 2rem;
     @include flex(center, center);
     &__form {
       width: 100%;

@@ -12,7 +12,15 @@
             :class="$route.name === route.name ? 'active' : ''"
           >
             <router-link :to="route.path">
-              {{ route.name }}
+              <span>
+                {{ route.name }}
+              </span>
+              <i
+                :class="[
+                  'fas',
+                  route.name === 'home' ? 'fa-home' : 'fa-images'
+                ]"
+              ></i>
             </router-link>
           </li>
           <li>
@@ -53,6 +61,10 @@ export default {};
   &__logo {
     img {
       height: 3rem;
+
+      @media (max-width: 425px) {
+        height: 2rem;
+      }
     }
   }
 
@@ -69,8 +81,27 @@ export default {};
           color: rgba($primary, 0.35);
         }
 
+        .fa-home,
+        .fa-images {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .fa-home,
+          .fa-images {
+            display: inline-block;
+          }
+          span {
+            display: none;
+          }
+        }
+
         & + li {
           margin-left: 3rem;
+
+          @media (max-width: 425px) {
+            margin-left: 2rem;
+          }
         }
 
         &.active {

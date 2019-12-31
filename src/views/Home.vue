@@ -8,7 +8,7 @@
       <div class="home__right">
         <Shutters :active="active" :photos="display.photos" />
         <ShutterNav
-          v-if="!active"
+          v-if="active === null"
           :active="active"
           :page="page"
           :pages="shutters.length"
