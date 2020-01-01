@@ -1,7 +1,7 @@
 <template>
   <div class="gallery">
     <div class="gallery__heading text-center">
-      <h1>The Iron Grove</h1>
+      <img src="../assets/images/name.svg" alt="" />
     </div>
 
     <div class="gallery__inner">
@@ -38,7 +38,9 @@
   }
 
   &__heading {
-    text-transform: uppercase;
+    img {
+      height: 2.5rem;
+    }
   }
 
   &__inner {

@@ -2,6 +2,9 @@
   <div id="gallery" class="my-container">
     <div class="access" v-if="!$root.access">
       <form class="access__form" @submit.prevent="gainAccess">
+        <div class="logo text-center mb-2">
+          <img class="w-100" src="../assets/images/name.svg" alt="" />
+        </div>
         <input
           class="w-100 mb-3 primary-input"
           type="password"
@@ -9,6 +12,9 @@
           placeholder="Enter password to gain access"
           v-model="password"
         />
+        <p v-if="error" class="alert text-center">
+          {{ error }}
+        </p>
         <p class="mb-0">
           <button type="submit" class="primary-btn w-100">
             Enter
@@ -33,6 +39,10 @@
     &__form {
       width: 100%;
     }
+
+    .alert {
+      color: $color1;
+    }
   }
 }
 </style>
@@ -45,13 +55,15 @@ export default {
     Gallery
   },
   data: () => ({
-    password: ""
+    password: "",
+    error: ""
   }),
   methods: {
     gainAccess() {
       const that = this;
       const password = that.password;
       const access = password === that.galleryPass ? true : false;
+      !access ? (that.error = "Password is not correct.") : (that.error = "");
       that.$root.access = access;
       return;
     }

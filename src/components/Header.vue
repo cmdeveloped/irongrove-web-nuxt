@@ -2,7 +2,9 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__logo">
-        <img src="../assets/images/favicon.svg" alt="" />
+        <router-link to="/">
+          <img src="../assets/images/favicon.svg" alt="" />
+        </router-link>
       </div>
       <nav class="header__nav">
         <ul>
