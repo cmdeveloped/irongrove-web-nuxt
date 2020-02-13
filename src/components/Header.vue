@@ -1,6 +1,6 @@
 <template>
-  <header class="header">
-    <div class="header__inner">
+  <header class="header" ref="header" :style="styles">
+    <div class="header__inner" ref="header__inner">
       <div class="header__logo">
         <router-link to="/">
           <img src="../assets/images/favicon.svg" alt="" />
@@ -42,22 +42,42 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    height: 0
+  }),
+  mounted() {
+    this.height = this.$refs.header__inner.offsetHeight;
+  },
+  computed: {
+    styles() {
+      const height = `${this.height}px`;
+
+      return {
+        height
+      };
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 
 .header {
-  padding: 1.5rem 4rem;
-  // border-bottom: 1px solid $secondary;
-
-  @media (max-width: 1024px) {
-    padding: 1.5rem 2rem;
-  }
-
   &__inner {
     @include flex(center, space-between);
+    background-color: $secondary;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 4rem;
+    // border-bottom: 1px solid $secondary;
+
+    @media (max-width: 1024px) {
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__logo {

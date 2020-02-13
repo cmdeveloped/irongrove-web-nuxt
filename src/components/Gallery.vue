@@ -2,11 +2,20 @@
   <div class="gallery">
     <div class="gallery__heading text-center">
       <img src="../assets/images/name.svg" alt="" />
+      <nav class="mt-3">
+        <a :href="`#${key}`" v-for="(category, key) in categories" :key="key">
+          {{ key }}
+        </a>
+      </nav>
     </div>
 
     <div class="gallery__inner">
-      <section class="gallery__photos" v-for="(category, key) in categories">
-        <div class="gallery__photos--heading">
+      <section
+        class="gallery__photos"
+        v-for="(category, key) in categories"
+        :key="key"
+      >
+        <div class="gallery__photos--heading" :id="key">
           <h2>{{ key }}</h2>
         </div>
         <div class="photos">
@@ -40,6 +49,13 @@
   &__heading {
     img {
       height: 2.5rem;
+    }
+
+    a {
+      display: inline-block;
+      & + a {
+        margin-left: 2rem;
+      }
     }
   }
 

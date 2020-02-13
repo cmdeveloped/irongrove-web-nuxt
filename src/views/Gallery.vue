@@ -2,12 +2,13 @@
   <div id="gallery" class="my-container">
     <div class="access" v-if="!$root.access">
       <form class="access__form" @submit.prevent="gainAccess">
-        <div class="logo text-center mb-2">
+        <div class="logo text-center mb-4">
           <img class="w-100" src="../assets/images/name.svg" alt="" />
         </div>
         <input
           class="w-100 mb-3 primary-input"
           type="password"
+          autocomplete="new-password"
           name="access"
           placeholder="Enter password to gain access"
           v-model="password"
