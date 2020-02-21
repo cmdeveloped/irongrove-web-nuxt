@@ -5,7 +5,7 @@ export const shutters = [
     subtitle: "Quality that will stand the test of life.",
     photos: [
       {
-        heading: "#2 Lavallee",
+        heading: "Shann",
         statistics: {
           stat_1: {
             title: "Style",
@@ -21,10 +21,10 @@ export const shutters = [
             description: "White oak/Maple"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/cabinetry_6.jpg"
+        photo: "cabinetry_6.jpg"
       },
       {
-        heading: "Pool Table",
+        heading: "Shann",
         statistics: {
           stat_1: {
             title: "Description",
@@ -40,10 +40,10 @@ export const shutters = [
             description: "White oak"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/furniture_3.jpg"
+        photo: "furniture_3.jpg"
       },
       {
-        heading: "Spears #3596",
+        heading: "Jules",
         statistics: {
           stat_1: {
             title: "Description",
@@ -58,7 +58,7 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/architecture_2.jpg"
+        photo: "architecture_2.jpg"
       }
     ]
   },
@@ -68,7 +68,7 @@ export const shutters = [
       "Make any room in your home functional, beautiful, and reflective of your family’s needs and desires.",
     photos: [
       {
-        heading: "Spec 1433",
+        heading: "Francis",
         statistics: {
           stat_1: {
             title: "Style",
@@ -83,10 +83,10 @@ export const shutters = [
             description: "Maple"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/cabinetry_4.jpg"
+        photo: "cabinetry_4.jpg"
       },
       {
-        heading: "#2 Lavallee",
+        heading: "Shann",
         statistics: {
           stat_1: {
             title: "Style",
@@ -102,10 +102,10 @@ export const shutters = [
             description: "White oak/Maple"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/cabinetry_15.jpg"
+        photo: "cabinetry_15.jpg"
       },
       {
-        heading: "229 Spears",
+        heading: "Jules",
         statistics: {
           stat_1: {
             title: "Style",
@@ -120,7 +120,7 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/cabinetry_1.jpg"
+        photo: "cabinetry_1.jpg"
       }
     ]
   },
@@ -129,7 +129,7 @@ export const shutters = [
     subtitle: "Skip the furniture store and get what you truly imagined.",
     photos: [
       {
-        heading: "Spears Table",
+        heading: "Live Edge",
         statistics: {
           stat_1: {
             title: "Description",
@@ -137,17 +137,17 @@ export const shutters = [
           },
           stat_2: {
             title: "Finish/Color",
-            description: "Acrylic urethane/Natural"
+            description: "Acrylic urethane/Natural & weathered gray"
           },
           stat_3: {
             title: "Materials",
             description: "Sinker Cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/furniture_4.jpg"
+        photo: "furniture_4.jpg"
       },
       {
-        heading: "Kurk Close Sideboard",
+        heading: "Sideboard",
         statistics: {
           stat_1: {
             title: "Description",
@@ -162,26 +162,25 @@ export const shutters = [
             description: "Maple"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/furniture_7.jpg"
+        photo: "furniture_7.jpg"
       },
       {
-        heading: "Pool Table",
+        heading: "High Top",
         statistics: {
           stat_1: {
             title: "Description",
-            description: "Handcrafted pool table"
+            description: "Handcrafted dining table"
           },
           stat_2: {
             title: "Finish/Color",
-            description:
-              "Acrylic urethane/Antique Slate with Decorator's White ceruse finish"
+            description: "Acrylic urethane/Weathered gray"
           },
           stat_3: {
             title: "Materials",
-            description: "White oak"
+            description: "Sinker cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/furniture_2.jpg"
+        photo: "furniture_2.jpg"
       }
     ]
   },
@@ -192,11 +191,11 @@ export const shutters = [
       "Make your home unique with architectural details and component parts that are sure to catch guests' attention.",
     photos: [
       {
-        heading: "Stein #3",
+        heading: "Drift",
         statistics: {
           stat_1: {
             title: "Description",
-            description: "Library ladder/Barn door"
+            description: "Library ladder"
           },
           stat_2: {
             title: "Finish/Color",
@@ -204,13 +203,13 @@ export const shutters = [
           },
           stat_3: {
             title: "Materials",
-            description: "White oak/Cold rolled steel"
+            description: "White oak"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/architecture_3.jpg"
+        photo: "architecture_3.jpg"
       },
       {
-        heading: "Spears #283",
+        heading: "Jules",
         statistics: {
           stat_1: {
             title: "Description",
@@ -225,10 +224,10 @@ export const shutters = [
             description: "Sinker Cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/architecture_1.jpg"
+        photo: "architecture_1.jpg"
       },
       {
-        heading: "Spears #3596",
+        heading: "Jules",
         statistics: {
           stat_1: {
             title: "Description",
@@ -243,7 +242,7 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "https://irongrove.s3.us-east-2.amazonaws.com/architecture_2.jpg"
+        photo: "architecture_2.jpg"
       }
     ]
   }
