@@ -69,6 +69,7 @@ export default {
     @include flex(center, space-between);
     background-color: $secondary;
     position: fixed;
+    z-index: 8;
     width: 100%;
     top: 0;
     left: 0;

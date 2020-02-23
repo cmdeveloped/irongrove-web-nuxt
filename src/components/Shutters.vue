@@ -37,15 +37,21 @@
 export default {
   methods: {
     photoPath(info) {
+      const modern = this.$root.loadWebP;
       let { category, project, photo } = info;
       let inProject = category !== "architecture" ? true : false;
       let path;
+
       if (!inProject) {
-        path = `/assets/${category}/${photo}.jpg`;
+        path = modern
+          ? `/assets/${category}/${photo}.webp`
+          : `/assets/${category}/${photo}.jpg`;
         return path;
       }
 
-      path = `/assets/${category}/${project}/${photo}.jpg`;
+      path = modern
+        ? `/assets/${category}/${project}/${photo}.webp`
+        : `/assets/${category}/${project}/${photo}.jpg`;
       return path;
     }
   }
