@@ -44,14 +44,14 @@ export default {
 
       if (!inProject) {
         path = modern
-          ? `/assets/${category}/${photo}.webp`
-          : `/assets/${category}/${photo}.jpg`;
+          ? `assets/${category}/${photo}.webp`
+          : `assets/${category}/${photo}.jpg`;
         return path;
       }
 
       path = modern
-        ? `/assets/${category}/${project}/${photo}.webp`
-        : `/assets/${category}/${project}/${photo}.jpg`;
+        ? `assets/${category}/${project}/${photo}.webp`
+        : `assets/${category}/${project}/${photo}.jpg`;
       return path;
     }
   }

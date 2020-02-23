@@ -3,7 +3,7 @@
     <div class="header__inner" ref="header__inner">
       <div class="header__logo">
         <router-link to="/">
-          <img src="/assets/favicon.svg" alt="" />
+          <img src="assets/favicon.svg" alt="" />
         </router-link>
       </div>
       <nav class="header__nav">

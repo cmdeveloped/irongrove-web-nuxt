@@ -1,7 +1,7 @@
 <template>
   <div class="gallery">
     <div class="gallery__heading text-center">
-      <img src="/assets/name.svg" alt="The Iron Grove" />
+      <img src="assets/name.svg" alt="The Iron Grove" />
       <nav class="mt-3">
         <a
           v-for="(category, key) in categories"
@@ -33,9 +33,9 @@
             <div
               class="photo"
               :style="{
-                backgroundImage: `url('/assets/${category.name}/${photo.name}')`
+                backgroundImage: `url('assets/${category.name}/${photo.name}')`
               }"
-              @click="highlight = `/assets/${category.name}/${photo.name}`"
+              @click="highlight = `assets/${category.name}/${photo.name}`"
             ></div>
           </div>
         </div>
@@ -92,7 +92,7 @@
         <div class="center">
           <img
             :src="
-              `/assets/${carousel.category}/${carousel.project}/${
+              `assets/${carousel.category}/${carousel.project}/${
                 carousel.photos[carousel.active].name
               }`
             "
@@ -145,7 +145,7 @@ export default {
     projectCover(category, project) {
       const photos = this.displayType(project.photos);
       const cover = project.cover ? project.cover[0].name : photos[0].name;
-      const path = `/assets/${category}/${project.name}/${cover}`;
+      const path = `assets/${category}/${project.name}/${cover}`;
       return path;
     },
     setCarouselPhoto(dir) {
