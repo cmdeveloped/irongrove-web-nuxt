@@ -21,7 +21,11 @@ export const shutters = [
             description: "White oak/Maple"
           }
         },
-        photo: "cabinetry_6.jpg"
+        photo: {
+          category: "cabinetry",
+          project: "shann",
+          photo: "shann_35"
+        }
       },
       {
         heading: "Shann",
@@ -40,7 +44,11 @@ export const shutters = [
             description: "White oak"
           }
         },
-        photo: "furniture_3.jpg"
+        photo: {
+          category: "furniture",
+          project: "ceruse_pool_table",
+          photo: "ceruse_pool_table_3"
+        }
       },
       {
         heading: "Jules",
@@ -58,7 +66,11 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "architecture_2.jpg"
+        photo: {
+          category: "architecture",
+          project: null,
+          photo: "architecture_4"
+        }
       }
     ]
   },
@@ -83,7 +95,11 @@ export const shutters = [
             description: "Maple"
           }
         },
-        photo: "cabinetry_4.jpg"
+        photo: {
+          category: "cabinetry",
+          project: "francis",
+          photo: "francis_4"
+        }
       },
       {
         heading: "Shann",
@@ -102,7 +118,11 @@ export const shutters = [
             description: "White oak/Maple"
           }
         },
-        photo: "cabinetry_15.jpg"
+        photo: {
+          category: "cabinetry",
+          project: "shann",
+          photo: "shann_19"
+        }
       },
       {
         heading: "Jules",
@@ -120,7 +140,11 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "cabinetry_1.jpg"
+        photo: {
+          category: "cabinetry",
+          project: "jules",
+          photo: "jules_4"
+        }
       }
     ]
   },
@@ -144,7 +168,11 @@ export const shutters = [
             description: "Sinker Cypress"
           }
         },
-        photo: "furniture_4.jpg"
+        photo: {
+          category: "furniture",
+          project: "herringbone_live_edge_table",
+          photo: "herringbone_live_edge_table_1"
+        }
       },
       {
         heading: "Sideboard",
@@ -162,7 +190,11 @@ export const shutters = [
             description: "Maple"
           }
         },
-        photo: "furniture_7.jpg"
+        photo: {
+          category: "furniture",
+          project: "mirrored_sideboard",
+          photo: "mirrored_sideboard_5"
+        }
       },
       {
         heading: "High Top",
@@ -180,7 +212,11 @@ export const shutters = [
             description: "Sinker cypress"
           }
         },
-        photo: "furniture_2.jpg"
+        photo: {
+          category: "furniture",
+          project: "sinker_cypress_high_top",
+          photo: "sinker_cypress_high_top_1"
+        }
       }
     ]
   },
@@ -206,7 +242,11 @@ export const shutters = [
             description: "White oak"
           }
         },
-        photo: "architecture_3.jpg"
+        photo: {
+          category: "architecture",
+          project: null,
+          photo: "architecture_3"
+        }
       },
       {
         heading: "Jules",
@@ -224,7 +264,11 @@ export const shutters = [
             description: "Sinker Cypress"
           }
         },
-        photo: "architecture_1.jpg"
+        photo: {
+          category: "architecture",
+          project: null,
+          photo: "architecture_5"
+        }
       },
       {
         heading: "Jules",
@@ -242,7 +286,11 @@ export const shutters = [
             description: "Pecky Sinker Cypress"
           }
         },
-        photo: "architecture_2.jpg"
+        photo: {
+          category: "architecture",
+          project: null,
+          photo: "architecture_4"
+        }
       }
     ]
   }

@@ -8,7 +8,6 @@
 
 <script>
 import { routes } from "@/router";
-import { categories } from "@/assets/data/categories";
 
 import MyHeader from "@/components/Header";
 import MyFooter from "@/components/Footer";
@@ -20,25 +19,8 @@ export default {
     MyFooter
   },
   data: () => ({
-    routes,
-    categories
-  }),
-  computed: {
-    preload() {
-      let images = [];
-      let keys = Object.keys(this.categories);
-      for (let key of keys) {
-        images = [...images, this.categories[key]];
-      }
-      images = images.flat();
-
-      for (let image of images) {
-        let preload = new Image();
-        preload.src = image;
-      }
-      return images;
-    }
-  }
+    routes
+  })
 };
 </script>
 

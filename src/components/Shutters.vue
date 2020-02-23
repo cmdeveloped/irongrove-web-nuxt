@@ -15,7 +15,9 @@
     >
       <div
         class="shutter__inner"
-        :style="{ backgroundImage: 'url(' + photo.photo + ')' }"
+        :style="{
+          backgroundImage: `url( ${photoPath(photo.photo)} )`
+        }"
       >
         <button
           type="button"
@@ -32,7 +34,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    photoPath(info) {
+      let { category, project, photo } = info;
+      let inProject = category !== "architecture" ? true : false;
+      let path;
+      if (!inProject) {
+        path = `/assets/${category}/${photo}.jpg`;
+        return path;
+      }
+
+      path = `/assets/${category}/${project}/${photo}.jpg`;
+      return path;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

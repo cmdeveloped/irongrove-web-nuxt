@@ -1,7 +1,7 @@
 <template>
   <div class="gallery">
     <div class="gallery__heading text-center">
-      <img src="../assets/images/name.svg" alt="" />
+      <img src="/assets/name.svg" alt="" />
     </div>
 
     <div class="gallery__inner">
@@ -128,7 +128,7 @@
 
 <script>
 /* eslint-disable */
-import { categories } from "@/assets/data/categories";
+import categories from "@/assets/data/images";
 
 export default {
   data: () => ({
