@@ -2,6 +2,15 @@
   <div class="gallery">
     <div class="gallery__heading text-center">
       <img src="/assets/name.svg" alt="The Iron Grove" />
+      <nav class="mt-3">
+        <a
+          v-for="(category, key) in categories"
+          :href="`#${category.name}`"
+          :key="key"
+        >
+          {{ category.name }}
+        </a>
+      </nav>
     </div>
 
     <div class="gallery__inner">
