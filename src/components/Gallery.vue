@@ -86,7 +86,7 @@
       @click="carousel = false"
     >
       <div class="carousel">
-        <div class="left">
+        <div class="left desktop">
           <i class="far fa-arrow-left" @click.stop="setCarouselPhoto(-1)"></i>
         </div>
         <div class="center">
@@ -102,8 +102,22 @@
             {{ carousel.active + 1 }} of {{ carousel.photos.length }} —
             {{ carousel.project | formatName }}
           </p>
+          <nav>
+            <div class="left mobile">
+              <i
+                class="far fa-arrow-left"
+                @click.stop="setCarouselPhoto(-1)"
+              ></i>
+            </div>
+            <div class="right mobile">
+              <i
+                class="far fa-arrow-right"
+                @click.stop="setCarouselPhoto(1)"
+              ></i>
+            </div>
+          </nav>
         </div>
-        <div class="right">
+        <div class="right desktop">
           <i class="far fa-arrow-right" @click.stop="setCarouselPhoto(1)"></i>
         </div>
       </div>
@@ -303,12 +317,35 @@ export default {
     @include flex(center, center);
     width: 100%;
 
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
+
     .left,
     .right {
       text-align: center;
       width: 10rem;
       flex-shrink: 0;
       font-size: 2rem;
+
+      &.desktop {
+        @media (max-width: 1050px) {
+          display: none;
+        }
+      }
+
+      &.mobile {
+        display: none;
+
+        @media (max-width: 1050px) {
+          display: block;
+        }
+      }
+
+      @media (max-width: 1050px) {
+        width: 100%;
+        padding: 0 2rem;
+      }
 
       i {
         cursor: pointer;
@@ -324,11 +361,23 @@ export default {
       flex-direction: column;
 
       img {
+        max-width: calc(100% - 2rem);
+        max-height: calc(100% - 8rem);
+        box-shadow: -2px 2px 1rem rgba(black, 0.4);
         margin-bottom: 2rem;
       }
 
       p {
         margin: 0;
+      }
+
+      nav {
+        @media (min-width: 1051px) {
+          display: none;
+        }
+
+        margin-top: 1rem;
+        @include flex(center, center);
       }
     }
   }

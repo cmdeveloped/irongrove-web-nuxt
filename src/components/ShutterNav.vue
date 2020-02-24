@@ -15,9 +15,7 @@
         type="button"
         name="shutter-next"
         class="primary-btn"
-        @click="
-          $attrs.page !== $attrs.pages - 1 ? $parent.page++ : ($parent.page = 0)
-        "
+        @click="nextPage()"
       >
         Next <i class="fas fa-right"></i>
       </button>
@@ -26,7 +24,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    nextPage() {
+      this.$attrs.page !== this.$attrs.pages - 1
+        ? this.$parent.page++
+        : (this.$parent.page = 0);
+
+      const winWidth = window.outerWidth;
+      if (winWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
