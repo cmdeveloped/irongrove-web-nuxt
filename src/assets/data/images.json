@@ -31,6 +31,7 @@
     "projects": [
       {
         "name": "cherry",
+        "cover": [{ "name": "cherry_8.jpg" }, { "name": "cherry_8.webp" }],
         "photos": [
           { "name": "cherry_1.jpg" },
           { "name": "cherry_1.webp" },
@@ -52,6 +53,7 @@
       },
       {
         "name": "drift",
+        "cover": [{ "name": "drift_3.jpg" }, { "name": "drift_3.webp" }],
         "photos": [
           { "name": "drift_1.jpg" },
           { "name": "drift_1.webp" },
@@ -77,6 +79,7 @@
       },
       {
         "name": "francis",
+        "cover": [{ "name": "francis_4.jpg" }, { "name": "francis_4.webp" }],
         "photos": [
           { "name": "francis_1.jpg" },
           { "name": "francis_1.webp" },
@@ -100,6 +103,7 @@
       },
       {
         "name": "jules",
+        "cover": [{ "name": "jules_11.jpg" }, { "name": "jules_11.webp" }],
         "photos": [
           { "name": "jules_1.jpg" },
           { "name": "jules_1.webp" },
@@ -133,6 +137,7 @@
       },
       {
         "name": "paradise",
+        "cover": [{ "name": "paradise_7.jpg" }, { "name": "paradise_7.webp" }],
         "photos": [
           { "name": "paradise_1.jpg" },
           { "name": "paradise_1.webp" },
@@ -190,6 +195,10 @@
       },
       {
         "name": "pine_valley",
+        "cover": [
+          { "name": "pine_valley_13.jpg" },
+          { "name": "pine_valley_13.webp" }
+        ],
         "photos": [
           { "name": "pine_valley_1.jpg" },
           { "name": "pine_valley_1.webp" },
@@ -223,6 +232,7 @@
       },
       {
         "name": "shann",
+        "cover": [{ "name": "shann_35.jpg" }, { "name": "shann_35.webp" }],
         "photos": [
           { "name": "shann_1.jpg" },
           { "name": "shann_1.webp" },

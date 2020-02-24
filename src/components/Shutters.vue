@@ -11,7 +11,7 @@
           : ''
       ]"
       :key="'shutter-' + idx"
-      @click="$parent.active = idx"
+      @click="setActive(idx)"
     >
       <div
         class="shutter__inner"
@@ -23,7 +23,7 @@
           type="button"
           name="shutter-back"
           class="primary-btn"
-          @click.stop="$parent.active = null"
+          @click.stop="imageBack()"
           v-if="$parent.active !== null && $parent.active === idx"
         >
           <i class="fas fa-left"></i> Back
@@ -36,6 +36,20 @@
 <script>
 export default {
   methods: {
+    toTop() {
+      const winWidth = window.outerWidth;
+      if (winWidth < 1024) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    setActive(idx) {
+      this.$parent.active = idx;
+      this.toTop();
+    },
+    imageBack() {
+      this.$parent.active = null;
+      this.toTop();
+    },
     photoPath(info) {
       const modern = this.$root.loadWebP;
       let { category, project, photo } = info;
