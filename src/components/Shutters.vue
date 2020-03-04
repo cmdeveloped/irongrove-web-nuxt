@@ -54,19 +54,28 @@ export default {
       const modern = this.$root.loadWebP;
       let { category, project, photo } = info;
       let inProject = category !== "architecture" ? true : false;
+      let viewport = this.viewport;
       let path;
 
       if (!inProject) {
-        path = modern
-          ? `assets/${category}/${photo}.webp`
-          : `assets/${category}/${photo}.jpg`;
+        path =
+          modern && viewport === "desktop"
+            ? `assets/desktop/${category}/${photo}.webp`
+            : `assets/${viewport}/${category}/${photo}.jpg`;
         return path;
       }
 
-      path = modern
-        ? `assets/${category}/${project}/${photo}.webp`
-        : `assets/${category}/${project}/${photo}.jpg`;
+      path =
+        modern && viewport === "desktop"
+          ? `assets/desktop/${category}/${project}/${photo}.webp`
+          : `assets/${viewport}/${category}/${project}/${photo}.jpg`;
       return path;
+    }
+  },
+  computed: {
+    viewport() {
+      let winSize = window.outerWidth;
+      return winSize > 768 ? "desktop" : "mobile";
     }
   }
 };

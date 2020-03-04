@@ -33,9 +33,13 @@
             <div
               class="photo"
               :style="{
-                backgroundImage: `url('assets/${category.name}/${photo.name}')`
+                backgroundImage: `url('assets/${viewport}/${category.name}/${
+                  photo.name
+                }')`
               }"
-              @click="highlight = `assets/${category.name}/${photo.name}`"
+              @click="
+                highlight = `assets/${viewport}/${category.name}/${photo.name}`
+              "
             ></div>
           </div>
         </div>
@@ -92,7 +96,7 @@
         <div class="center">
           <img
             :src="
-              `assets/${carousel.category}/${carousel.project}/${
+              `assets/${viewport}/${carousel.category}/${carousel.project}/${
                 carousel.photos[carousel.active].name
               }`
             "
@@ -147,8 +151,9 @@ export default {
   methods: {
     displayType(photos) {
       const modern = this.$root.loadWebP;
+      let viewport = this.viewport;
 
-      if (modern) {
+      if (modern && viewport === "desktop") {
         photos = photos.filter(p => p.name.indexOf(".webp") > -1);
       } else {
         photos = photos.filter(p => p.name.indexOf(".jpg") > -1);
@@ -157,9 +162,10 @@ export default {
       return photos;
     },
     projectCover(category, project) {
+      let viewport = this.viewport;
       const photos = this.displayType(project.photos);
       const cover = project.cover ? project.cover[0].name : photos[0].name;
-      const path = `assets/${category}/${project.name}/${cover}`;
+      const path = `assets/${viewport}/${category}/${project.name}/${cover}`;
       return path;
     },
     setCarouselPhoto(dir) {
@@ -177,7 +183,12 @@ export default {
       return;
     }
   },
-  computed: {}
+  computed: {
+    viewport() {
+      let winSize = window.outerWidth;
+      return winSize > 768 ? "desktop" : "mobile";
+    }
+  }
 };
 </script>
 
