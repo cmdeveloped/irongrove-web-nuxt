@@ -20,7 +20,16 @@ export default {
   },
   data: () => ({
     routes
-  })
+  }),
+  metaInfo() {
+    let meta = this.$route.meta;
+
+    return {
+      title: meta.title,
+      titleTemplate: "The Iron Grove — %s",
+      meta: [{ name: "description", content: meta.description }]
+    };
+  }
 };
 </script>
 
