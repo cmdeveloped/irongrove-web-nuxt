@@ -195,10 +195,7 @@
       },
       {
         "name": "pine_valley",
-        "cover": [
-          { "name": "pine_valley_13.jpg" },
-          { "name": "pine_valley_13.webp" }
-        ],
+        "cover": [{ "name": "pine_valley_13.jpg" }, { "name": "pine_valley_13.webp" }],
         "photos": [
           { "name": "pine_valley_1.jpg" },
           { "name": "pine_valley_1.webp" },
@@ -445,26 +442,26 @@
         ]
       },
       {
-        "name": "padual_round_table",
+        "name": "paduak_round_table",
         "photos": [
-          { "name": "padual_round_table_1.jpg" },
-          { "name": "padual_round_table_1.webp" },
-          { "name": "padual_round_table_2.jpg" },
-          { "name": "padual_round_table_2.webp" },
-          { "name": "padual_round_table_3.jpg" },
-          { "name": "padual_round_table_3.webp" },
-          { "name": "padual_round_table_4.jpg" },
-          { "name": "padual_round_table_4.webp" },
-          { "name": "padual_round_table_5.jpg" },
-          { "name": "padual_round_table_5.webp" },
-          { "name": "padual_round_table_6.jpg" },
-          { "name": "padual_round_table_6.webp" },
-          { "name": "padual_round_table_7.jpg" },
-          { "name": "padual_round_table_7.webp" },
-          { "name": "padual_round_table_8.jpg" },
-          { "name": "padual_round_table_8.webp" },
-          { "name": "padual_round_table_9.jpg" },
-          { "name": "padual_round_table_9.webp" }
+          { "name": "paduak_round_table_1.jpg" },
+          { "name": "paduak_round_table_1.webp" },
+          { "name": "paduak_round_table_2.jpg" },
+          { "name": "paduak_round_table_2.webp" },
+          { "name": "paduak_round_table_3.jpg" },
+          { "name": "paduak_round_table_3.webp" },
+          { "name": "paduak_round_table_4.jpg" },
+          { "name": "paduak_round_table_4.webp" },
+          { "name": "paduak_round_table_5.jpg" },
+          { "name": "paduak_round_table_5.webp" },
+          { "name": "paduak_round_table_6.jpg" },
+          { "name": "paduak_round_table_6.webp" },
+          { "name": "paduak_round_table_7.jpg" },
+          { "name": "paduak_round_table_7.webp" },
+          { "name": "paduak_round_table_8.jpg" },
+          { "name": "paduak_round_table_8.webp" },
+          { "name": "paduak_round_table_9.jpg" },
+          { "name": "paduak_round_table_9.webp" }
         ]
       },
       {
