@@ -20,11 +20,11 @@
 # correct file naming convention in architecture directory
 
 index=1
-find ./architecture -type f -name "*.jpg" | sort -V | while read fname
+find ./assets/mobile/furniture/padauk_round_table -type f -name "*.jpg" | sort -V | while read fname
 do
   dir=$(dirname $fname)
   dname=$(basename $dir)
   new=${dir}/${dname}_${index}.jpg
-  echo "$fname" $new
+  mv "$fname" $new
   ((index++))
 done
